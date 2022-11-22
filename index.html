@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <title>Biscard|DIGITAL BUSINESS CARD</title>
+</head>
+
+<style>
+    .card {
+        border-radius: 15px;
+        position: relative;
+        height: 550px;
+        width: 300px;
+        background-color: #d2bb97;
+        margin: 40px auto;
+    }
+    
+    .header {
+        position: absolute;
+        height: 0px;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-image: linear-gradient(to right, #3F0071, #610094);
+    }
+    
+    .header img {
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        left: 75px;
+        top: 10px;
+    }
+    
+    .header h3 {
+        position: absolute;
+        font-family: sans-serif;
+        color: #bba481;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        top: 150px;
+        left: 100px;
+    }
+    
+    .header p {
+        position: absolute;
+        font-family: sans-serif;
+        color: #bba481;
+        font-size: 16px;
+        top: 180px;
+        left: 30px
+    }
+    
+    .body {
+        position: absolute;
+        height: 126px;
+        left: 5px;
+        right: 5px;
+        top: 44.2%;
+       
+        
+    }
+    
+    .body ul {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+    
+    .body ul li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        height: 40px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: #d2bb97(255, 0, 0);
+        transition: all .3s ease-in-out;
+    }
+    
+    .body ul li p,
+    h3,
+    i {
+        position: absolute;
+    }
+    
+    .body ul li h3 {
+        top: -17px;
+        left: 58px;
+        color: #610094;
+    }
+    
+    .body ul li p {
+        top: 14px;
+        left: 59px;
+        font-size: 12px;
+        font-family: sans-serif;
+        color: #988568;
+    }
+    
+    .body ul li i {
+        left: 8px;
+        top: 7px;
+        color: #faf5ef;
+        font-size: 26px;
+    }
+    
+    .body ul li:nth-child(1) {
+        top: -16px;
+    }
+    
+    .body ul li:nth-child(2) {
+        top: 26px;
+    }
+    
+    .body ul li:nth-child(3) {
+        top: 68px;
+    }
+    
+    .body ul li:nth-child(1) i {
+        left: 12px;
+    }
+    
+    .body li:hover {
+        background-color: rgb(187, 164, 129);
+        cursor: pointer;
+    }
+	 .body1 {
+        position: absolute;
+        height: 80px;
+        left: 5px;
+        right: 5px;
+        top: 67%;
+        background-color:#e6cda6(255, 0, 0);
+        
+    }
+    
+    .body1 ul {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+    
+    .body1 ul li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        height: 40px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color:#ffffff(250, 25, 10);
+        transition: all .3s ease-in-out;
+    }
+    
+    .body1 ul li p,
+    h3,
+    i {
+        position: absolute;
+    }
+    
+    .body1 ul li h3 {
+        top: -17px;
+        left: 58px;
+        color: #000000;
+    }
+    
+    .body1 ul li p {
+        top: 14px;
+        left: 59px;
+        font-size: 12px;
+        font-family: sans-serif;
+        color: #988568;
+    }
+    
+    .body1 ul li i {
+        left: 8px;
+        top: 7px;
+        color: #faf5ef;
+        font-size: 26px;
+    }
+    
+    .body1 ul li:nth-child(1) {
+        top: -16px;
+    }
+    
+    .body1 ul li:nth-child(2) {
+        top: 26px;
+    }
+    
+    .body1 ul li:nth-child(3) {
+        top: 68px;
+    }
+    
+    .body1 ul li:nth-child(1) i {
+        left: 12px;
+    }
+    
+    .body1 li:hover {
+        background-color:rgb(187, 164, 129);
+        cursor: pointer;
+    }
+    /*footer*/
+    
+    .footer {
+        border-radius: 15px;
+        position: absolute;
+        height: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to right,#bba481, #d1b891);
+    }
+    
+    .footer ul {
+        position: absolute;
+        left: 6px;
+    }
+    
+    .footer ul li {
+        display: inline-block;
+        margin-left: 60px;
+    }
+    
+    .footer ul li i {
+        font-size: 30px;
+        color: #faf5ef;
+        transition: all .3s ease-in;
+    }
+    
+    .footer ul li:hover i {
+        transform: scale(0.9);
+        color: #70685b;
+        cursor: pointer;
+        border-bottom: 2px solid #000;
+    }
+
+.download-btn{
+    position: absolute;
+    background-color: #bba481;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius:8px;
+}
+
+.download-btn:hover {
+    background-color: #a38f71;
+  }
+
+</style>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            <img src="stephys logo for.png">
+            <h3>STEPHYS</h3>
+            <p>Personalised and handmade gifts</p>
+        </div>
+
+        <div class="body">
+            <ul>
+                <li>
+                    <h3><a href="tel:+35679014631">79014631</a></h3>
+                    <p>Mobile number</p>
+                    <i class="fas fa-mobile-alt"></i>
+                </li>
+                <li>
+                    <h3><a href="https://wa.me/+35679014631">79014631</a></h3>
+                    <p>Whatsapp</p>
+                    <i class="fab fa-whatsapp"></i>
+                </li>
+                <li>
+                    <h3><a href="https://goo.gl/maps/c5a76yqB37M13UdCA">Manikata</a></h3>
+                    <p>Location</p>
+                    <i class="fas fa-map-marked"></i>
+                </li>
+			</ul>
+			
+        </div>
+    <div class="body1">
+            <ul>
+                <li>
+                    <h3><a href="mailto:stephysmalta@gmail.com">stephysmalta</a></h3>
+                    <p>Email address</p>
+                    <i class="fas fa-envelope"></i>
+                </li>
+                <li>
+                    
+                </li>
+			</ul>
+			
+        </div>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/stephyshandmadecreations"><i class="fab fa-facebook-f"></i></a>
+                </li>
+               
+                <li>
+                   <a href="https://instagram.com/stephys_malta?igshid=YmMyMTA2M2Y="> <i class="fab fa-instagram"></i></a>
+                </li>
+                
+            </ul>
+        </div>
+        <body2>
+            <a href="./stephys card.png" download='image' class="download-btn">Save Card 
+                
+            </a>
+        </body2>
+
+    </div>
+
+</body>
+
+</html>
